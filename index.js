@@ -120,16 +120,14 @@ const questions = [
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).catch((error) => { //.then(writeToFile(answers))
-        // if (error.isTtyError) {
-        //     console.error('Prompt could not be rendered in the current environment', error);
-        // } else {
-        //     console.error('something else went wrong', error);
-        // }
+    inquirer.prompt(questions)
+    .then((answers) => {
+        const readmeContent = generateMarkdown(answers);
+
+        fs.writeFileSync('READYOU.md', readmeContent, (error) =>
+        error ? console.log(error) : console.log('successfully created READYOU.md!'));
     })
 };
-//     // ! catch(err)
-// }
 
 // Function call to initialize app
 init();
