@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const { error } = require('console');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -14,7 +13,7 @@ const questions = [
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please describe the functionality of your app!');
+                console.error('Answer Required!');
                 return false;
             }
         }
@@ -27,7 +26,7 @@ const questions = [
             if (descripHow) {
                 return true;
             } else {
-                console.log('Please describe the functionality of your app!');
+                console.error('Answer Required!');
                 return false;
             }
         }
@@ -40,10 +39,12 @@ const questions = [
             if (descripWhy) {
                 return true;
             } else {
-                console.log('Answer Required.');
+                console.error('Answer Required!');
                 return false;
             }
-        },
+        }
+    },
+    {
         type: 'input',
         name: 'descripLearn',
         message: 'What problem(s) does your application solve? (Required)',
@@ -51,7 +52,7 @@ const questions = [
             if (descripLearn) {
                 return true;
             } else {
-                console.log('Answer Required.');
+                console.error('Answer Required!');
                 return false;
             }
         },
@@ -63,14 +64,26 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'usageInstruct',
-        message: 'Please provide any and all instructions with examples that are necessary to utilize this application',
+        name: 'usage',
+        message: 'Provide instructions and examples for use. You should add a screenshot here too - See generated README.md for more details',
     },
     {
         type: 'list',
         name: 'license',
         message: 'Please provide any and all instructions with examples that are necessary to utilize this application',
-        choices:['None', 'Apache License 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified', 'BSD 3-Clause "New" || "Revised"', 'Boost Software', 'Creative Commons Zero', 'Eclipse Public', 'GNU Affero General Public 3.0', 'GNU General Public 2.0', 'GNU Lesser General Public 2.1', 'Mozilla Public 2.0', 'The Unlicense'],
+        choices: ['None', 'Apache License 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified', 'BSD 3-Clause "New" || "Revised"', 'Boost Software', 'Creative Commons Zero', 'Eclipse Public', 'GNU Affero General Public 3.0', 'GNU General Public 2.0', 'GNU Lesser General Public 2.1', 'Mozilla Public 2.0', 'The Unlicense'],
+    },
+    {
+        type: 'input',
+        name: 'collabs',
+        message: 'If you would like to add contributors to this application, add their names and/or Github usernames here',
+
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.',
+
     },
     {
         type: 'input',
@@ -93,40 +106,31 @@ const questions = [
             if (email) {
                 return true;
             } else {
-                console.log('please provide your email address!')
+                console.log('yo [fe]male, what\'s yo email?')
                 return false;
             }
         }
-    },
-    {
-        type: 'input',
-        name: 'collabs',
-        message: 'If you would like to add contributors to this application, add their names and/or Github usernames here',
-    
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.',
-        
     },
 
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(generateMarkdown, data) {
+// const writeToFile = (generateMarkdown, data) => {
+//     return new Promise((resolve, reject) => {
 
+//     })
 // }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => {
-        const readmeContent = generateMarkdown(answers);
+        .then((answers) => {
+            console.log(answers);
+            const readmeContent = generateMarkdown(answers);
 
-        fs.writeFileSync('READYOU.md', readmeContent, (error) =>
-        error ? console.log(error) : console.log('successfully created READYOU.md!'));
-    })
+            fs.writeFileSync('READYOU.md', readmeContent, (error) =>
+                error ? console.log(error) : console.log('successfully created READYOU.md!'));
+        })
 };
 
 // Function call to initialize app
