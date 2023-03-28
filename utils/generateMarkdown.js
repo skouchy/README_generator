@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// * Returns a license badge based on which license chosen by user
 function renderLicenseBadge(license) {
   let badgeLink = '';
   let licenseURL = `https://opensource.org/license/`
@@ -42,6 +41,7 @@ function renderLicenseBadge(license) {
   }
 }
 
+// * Called from index to generate user README - purpose of this app
 function generateMarkdown(data) {
 
   return `
