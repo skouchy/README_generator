@@ -1,18 +1,49 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) {
+  let badgeLink = '';
+  let licenseURL = `https://opensource.org/license/`
+  let licenseLink = '';
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
+  if (license !== 'None') {
+    badgeLink = `![License](https://img.shields.io/badge/License-${license}-green.svg)`;
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
+    switch (license) {
+      case 'Apache License 2.0':
+        licenseLink = `${licenseURL}Apache-2.0/`;
+        break;
+      case 'GNU General Public v3.0':
+        licenseLink = `${licenseURL}GPL-3.0/`;
+        break;
+      case 'MIT':
+        licenseLink = `${licenseURL}MIT/`;
+        break;
+      case 'BSD 2-Clause':
+        licenseLink = `${licenseURL}bsd-2-clause/`;
+        break;
+      case 'BSD 3-Clause':
+        licenseLink = `${licenseURL}bsd-3-clause/`;
+        break;
+      case 'Boost Software':
+        licenseLink = `${licenseURL}bsl1-0-html/`;
+        break;
+      case 'Eclipse Public 2.0':
+        licenseLink = `${licenseURL}epl-2-0/`;
+        break;
+      // add more cases for other license choices as needed
+      default: 'None';
+        break;
+    }
+    return `[${license}](${licenseLink})\n 
+    ${badgeLink}`;
 
+  } else {
+    return '';
+  }
+}
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
   return `
   # ${data.title}
 
@@ -40,9 +71,8 @@ function generateMarkdown(data) {
   // * To add a screenshot, create an 'assets/images' folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
   // * ![alt text](assets/images/screenshot.png)
 
-
   ## License
-  ${data.license}
+  ${renderLicenseBadge(data.license)}
 
   ## Credits
   ${data.collabs}
