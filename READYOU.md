@@ -2,7 +2,7 @@
 # README_generator
 
 ## Description
-Allows a user to quickly generate a README.md file straight from the terminal. 
+Allows a user to quickly generate a README.md file straight from the terminal.  
 Every repository project/ application should include a descriptive README.md, so this README generated app prompts a series of questions that should relieve a user’s pressure of organically thinking up the what, why, and how for every project they create.
 My biggest challenge, was determining how to call a function within a returned template literal and then returning it’s results. This case was specific to automating license badges with their links based on conditions of user input.
 
@@ -23,7 +23,7 @@ My biggest challenge, was determining how to call a function within a returned t
 
 
 ## Installation
-npm i inquiere@8.2.4
+* javascript 
 
 ## Usage
 
@@ -36,7 +36,7 @@ npm i inquiere@8.2.4
 [MIT](https://opensource.org/badge/license/MIT/)![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Credits
-Me!
+me!
 
 ## Tests
 
@@ -45,4 +45,4 @@ Me!
 for additional questions...
 
 On Github: https://github.com/skouchy
-skouchy34@gmail.com
+skouchy24@gmail.com
