@@ -24,7 +24,7 @@ https://github.com/skouchy/README_generator
 https://watch.screencastify.com/v/hI4xljqc0NWfY3nCDT5i
 
 ### Screenshot
-![project_screenshot](/assets/images/github.com_skouchy_README_generator.png)
+![project_screenshot](/assets/images/github.com_skouchy_README_gen.png)
 
 ## Installation
 
