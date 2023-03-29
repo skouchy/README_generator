@@ -71,7 +71,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Please provide any and all instructions with examples that are necessary to utilize this application',
-        choices: ['None', 'Apache License 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause', 'BSD 3-Clause', 'Boost Software', 'Eclipse Public 2.0'],
+        choices: ['None', 'Apache 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause', 'BSD 3-Clause', 'Boost Software', 'Eclipse Public 2.0'],
     },
     {
         type: 'input',

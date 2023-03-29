@@ -1,50 +1,48 @@
 
-  # README_generator
+# README_generator
 
-  ## Description
-  Allows a user to quickly generate a README.md file straight from the terminal. 
-  Every repository project/ application should include a descriptive README.md, so this README generated app prompts a series of questions that should relieve a user’s pressure of organically thinking up the what, why, and how for every project they create.
-  My biggest challenge, was determining how to call a function within a returned template literal and then returning it’s results. This case was specific to automating license badges with their links based on conditions of user input.
+## Description
+Allows a user to quickly generate a README.md file straight from the terminal. 
+Every repository project/ application should include a descriptive README.md, so this README generated app prompts a series of questions that should relieve a user’s pressure of organically thinking up the what, why, and how for every project they create.
+My biggest challenge, was determining how to call a function within a returned template literal and then returning it’s results. This case was specific to automating license badges with their links based on conditions of user input.
 
-  ## Table of Contents
-  [Description](#description)
+## Table of Contents
+[Description](#description)
 
-  [Installation](#installation)
+[Installation](#installation)
 
-  [Usage](#usage)
+[Usage](#usage)
 
-  [License](#license)
+[License](#license)
 
-  [Credits](#credits)
+[Credits](#credits)
 
-  [Tests](#tests)
+[Tests](#tests)
 
-  [Contact](#contact)
+[Contact](#contact)
 
 
-  ## Installation
-  Required for use:
+## Installation
+npm i inquiere@8.2.4
 
-  ## Usage
-  Install inquirer v8.2.4 : npm i inquirer@8.2.4
-  
-  ### Screenshot
-  // * To add a screenshot, create an 'assets/images' folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-  // * ![alt text](assets/images/screenshot.png)
+## Usage
 
-  ## License
-  [MIT](https://opensource.org/license/MIT/)
- 
-    ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-  ## Credits
-  Lil ol' me
+### Screenshot
+* To add a screenshot, create an 'assets/images' folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+* ![alt text](assets/images/screenshot.png)
 
-  ## Tests
-  No tests currently
+## License
+[MIT](https://opensource.org/badge/license/MIT/)![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  ## Contact
-  for additional questions...
-  
-  On Github: https://github.com/skouchy
-  skouchy24@gmail.com
+## Credits
+Me!
+
+## Tests
+
+
+## Contact
+for additional questions...
+
+On Github: https://github.com/skouchy
+skouchy34@gmail.com
