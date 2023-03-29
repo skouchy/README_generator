@@ -24,6 +24,8 @@ My biggest challenge, was determining how to call a function within a returned t
 
 ## Installation
 * javascript 
+* NodeJs
+* npm inquirer v8.2.4
 
 ## Usage
 
