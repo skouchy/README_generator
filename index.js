@@ -47,7 +47,7 @@ const questions = [
     {
         type: 'input',
         name: 'descripLearn',
-        message: 'What problem(s) does your application solve? (Required)',
+        message: 'What did you learn in the process of building this app? (Required)',
         validate: descripLearn => {
             if (descripLearn) {
                 return true;
@@ -111,18 +111,17 @@ const questions = [
             }
         }
     },
-
 ];
 
-// TODO: Create a function to initialize app
+// * function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {
             console.log(answers);
             const readmeContent = generateMarkdown(answers);
 
-            fs.writeFileSync('READYOU.md', readmeContent, (error) =>
-                error ? console.log(error) : console.log('successfully created READYOU.md!'));
+            // * After promise above is complete, this creates the generated READYOU.md file with all returned data
+            fs.writeFileSync('READYOU.md', readmeContent, (error) => error ? console.log(error) : console.log('successfully created READYOU.md!'));
         })
 };
 
